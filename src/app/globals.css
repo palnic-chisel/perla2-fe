@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #333333;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@keyframes textWriting {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.text-writing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textWriting 3s steps(40, end);
+}
+
+.animate {
+  animation: textWriting 3s steps(40, end);
+}
+
+.wobbling-2 {
+  width:13rem;
+  height:20px;
+  border-radius: 20px;
+  background:
+          radial-gradient(farthest-side,#6fa7c7 94%,#0000 ) left/20px 20px no-repeat
+          white;
+  animation:w2 1.8s infinite linear;
+}
+@keyframes w2 {
+  50% {background-position:right }
+}
+
+@keyframes w4-1 {
+  100% {transform:translateX(80px)}
+}
+
+@keyframes w4-2 {
+  33% {clip-path:inset(0 0 0 -100px)}
+  50% {clip-path:inset(0 0 0 0)     }
+  83% {clip-path:inset(0 -100px 0 0)}
+}
+
+/*color: 'ffa384'*/
