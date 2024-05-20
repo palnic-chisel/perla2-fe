@@ -1,11 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import LeftColumn from '@/app/components/HomePage/LeftColumn/LeftColumn';
-import RightColumn from '@/app/components/HomePage/RightColumn/RightColumn';
-import CallMeButton from '@/app/components/CallMeButton/CallMeButton';
 import HomePageLayout from '@/app/components/HomePageLayout/HomePageLayout';
 import { HandlersProvider } from '@/app/hooks/HandlersContext';
 import SplashScreen from '@/app/components/SplashScreen/SplashScreen';
+import Hero from './components/version2/pages/Hero/';
+import Therapy from '@/app/components/version2/pages/Therapy';
 
 export default function Home() {
   const [isLoading, setLoading] = useState(true);
@@ -35,10 +34,10 @@ export default function Home() {
   return (
     <HandlersProvider>
       <HomePageLayout>
-        <main className="flex flex-col h-[100%] flex relative overflow-x-hidden desktopsm:flex-row">
-          <LeftColumn />
-          <RightColumn />
-          <CallMeButton />
+        <main className="flex flex-col h-[100%] flex relative overflow-x-hidden desktopsm:flex-row box-border">
+          {/*<Hero />*/}
+          <Therapy />
+          {/*<CallMeButton /> */}
         </main>
       </HomePageLayout>
     </HandlersProvider>
